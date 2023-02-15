@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+	<!-- Parameters used by tests at runtime -->
+	<TestRunParameters>
+		<Parameter name="Url" value="https://www.correios.com.br/" />
+		<Parameter name="Browser" value="chrome" />
+		<Parameter name="ConnectionString" value="" />
+		<Parameter name="Environment" value="QA" />
+		<Parameter name="Username" value="Cesar Silva" />
+	</TestRunParameters>
+</RunSettings>

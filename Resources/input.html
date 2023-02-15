@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>InputBox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <label for="valor">Por favor digite o codigo captcha mostrado na aba ao lado e clique em ok:</label>
+  <input type="text" id="valor" name="valor">
+  <button id="okButton" onclick="okClicked()" data-clicado="false">OK</button>
+  <script>
+    function okClicked() {
+      document.getElementById("okButton").setAttribute("data-clicado", "true");
+      window.close()
+    }
+  </script>
+</body>
+</html>

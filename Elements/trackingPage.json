@@ -1,0 +1,4 @@
+﻿{
+  "fieldCaptcha": "input#captcha",
+  "btnSearchCaptcha": "button#b-pesquisar"
+}

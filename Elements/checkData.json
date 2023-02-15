@@ -1,0 +1,7 @@
+{
+  "resultScreen": "div#trilha",
+  "textResultInvalid": "mensagem-resultado-alerta",
+  "textResultValid": "table#resultado-DNEC td[data-th='Logradouro/Nome']",
+  "textResultState": "table#resultado-DNEC td[data-th='Localidade/UF']",
+  "alerMessage": "div [class='msg']"
+}
