@@ -47,7 +47,7 @@ namespace AutomationWeb.Core.Cesar.Pages
         }
         public string getValueMessageSearchResult()
         {
-            System.Threading.Thread.Sleep(100);
+            System.Threading.Thread.Sleep(1000);
             var text = get.GetInnerTextByCssSelector(idField.alerMessage);
             return text;
         }
