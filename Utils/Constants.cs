@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace AutomationWeb.Core.Cesar.OnboardingPF
+namespace AutomationWeb.Core.Cesar.constants
 {
     static class Constants
     {

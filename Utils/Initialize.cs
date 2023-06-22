@@ -1,10 +1,12 @@
 ﻿using System;
 using NUnit.Framework;
 using AutomationWeb.Core.Cesar.Utils;
+using AutomationWeb.Core.Cesar.Drivers;
 
 [SetUpFixture]
 public class BaseReport
 {
+    
     static string path = AppDomain.CurrentDomain.BaseDirectory.Split("\\bin")[0];
     Util util = new Util();
 

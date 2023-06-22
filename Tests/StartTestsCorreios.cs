@@ -1,4 +1,4 @@
-﻿using AutomationWeb.Core.Cesar.OnboardingPF;
+﻿using AutomationWeb.Core.Cesar.constants;
 using AutomationWeb.Core.Cesar.Utils;
 using NUnit.Core;
 using NUnit.Framework;
@@ -33,10 +33,9 @@ namespace AutomationWeb.Core.Cesar.Tests
             new HomeCorreiosPage(driver)
                 .searchForZipCode(Constants.CEP_VALIDO, idField.fieldSeachButtonZip)
                 .selectCurrentWindow();
-            var messageZipCode = new CheckData(driver).checkReturnTxtValidZip();
-            Assert.IsTrue(messageZipCode.Contains(Constants.TXT_CEP_LOGRADOURO), "Confirma o endereço");
-            var messageState = new CheckData(driver).checkReturnTxtState();
-            Assert.AreEqual(Constants.TXT_LOCALIDADE_UF, messageState, "Confirma que o Estado existe");
+            var check = new CheckData(driver);
+            Assert.IsTrue(check.checkReturnTxtValidZip().Contains(Constants.TXT_CEP_LOGRADOURO), "Confirma o endereço");
+            Assert.AreEqual(Constants.TXT_LOCALIDADE_UF, check.checkReturnTxtState(), "Confirma que o Estado existe");
         }
 
         [TestCase(TestName = "Avaliação Busca Código Rastreamento")]
@@ -45,8 +44,7 @@ namespace AutomationWeb.Core.Cesar.Tests
             var cr = new CheckData(driver);
             cr.selectCurrentWindow();
             new HomeCorreiosPage(driver)
-            .searchTrackingCode(Constants.CODIGO_RASTREIO, idField.fieldSeachButtonTrack)
-            .selectCurrentWindow();
+            .searchTrackingCode(Constants.CODIGO_RASTREIO, idField.fieldSeachButtonTrack);
             new TrackingPage(driver)
                 .trackingNextPage();
             var message = cr.getValueMessageSearchResult();

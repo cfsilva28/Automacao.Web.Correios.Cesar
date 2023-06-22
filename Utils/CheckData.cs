@@ -1,8 +1,7 @@
 ﻿using AutomationWeb.Core.Cesar.Utils;
 using AutomationWeb.Core.Cesar.Model;
 using OpenQA.Selenium;
-using AutomationWeb.Core.Cesar.OnboardingPF;
-
+using AutomationWeb.Core.Cesar.constants;
 namespace AutomationWeb.Core.Cesar.Pages
 {
     public class CheckData : BasePage
@@ -27,6 +26,12 @@ namespace AutomationWeb.Core.Cesar.Pages
                 }
             }
             driver.SwitchTo().Window(newWindowHandle);
+            return this;
+        }
+        public CheckData currentWindow()
+        {
+            string currentWindowHandle = driver.CurrentWindowHandle;
+            driver.SwitchTo().Window(currentWindowHandle);
             return this;
         }
         public string checkReturnTxtInvalidZip()

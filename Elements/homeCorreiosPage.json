@@ -1,5 +1,5 @@
 {
-  "fieldSeachButtonZip": ".card-mais-acessados[style='order: 1'] button",
+  "fieldSeachButtonZip": "div.card-mais-acessados:nth-child(1) .ic-busca-out",
   "fieldSeachButtonTrack": ".card-mais-acessados[style='order: 0'] button",
   "fieldZip": "[class='campo'] input#relaxation",
   "fieldBtnCloseCarol": "div [id='carol-fecha']",

@@ -1,4 +1,4 @@
-﻿using AutomationWeb.Core.Cesar.OnboardingPF;
+﻿using AutomationWeb.Core.Cesar.constants;
 using AutomationWeb.Core.Cesar.Pages;
 using AutomationWeb.Core.Cesar.Utils;
 using OpenQA.Selenium;
@@ -38,7 +38,7 @@ namespace Teste.AutomacaoWeb.Correios.Cesar.Pages
                 if (resultado)
                 {
                     string valorAtributo = inputElement.GetAttribute("value");
-                    string urrentWindow = driver.CurrentWindowHandle;
+                    string currentWindow = driver.CurrentWindowHandle;
                     driver.Close();
                     driver.SwitchTo().Window(driver.WindowHandles.Last());
                     return valorAtributo;

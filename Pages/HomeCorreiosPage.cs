@@ -1,5 +1,5 @@
 ﻿using AutomationWeb.Core.Cesar.Model;
-using AutomationWeb.Core.Cesar.OnboardingPF;
+using AutomationWeb.Core.Cesar.constants;
 using AutomationWeb.Core.Cesar.Utils;
 using OpenQA.Selenium;
 
@@ -21,7 +21,7 @@ namespace AutomationWeb.Core.Cesar.Pages
         }
         public HomeCorreiosPage writeTrackingCode(string tracking)
         {
-            write.WriteByCssSelector(idField.fieldTracking, tracking);
+            write.WriteByCssSelector(idField.fieldTracking, tracking + Keys.Enter);
             return this;
         }
         public void screenDown()
@@ -34,12 +34,12 @@ namespace AutomationWeb.Core.Cesar.Pages
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", element);
             return element;
         }
-        public HomeCorreiosPage clickSearchButton(string field)
-        {
-            screenDown();
-            click.ClickByCssSelector(field);
-            return this;
-        }
+        // public HomeCorreiosPage clickSearchButton(string field)
+        // {
+        //screenDown();
+        // click.ClickByCssSelector(field);
+        //   return this;
+        // }
         public bool helperCarol()
         {
             try
@@ -58,24 +58,17 @@ namespace AutomationWeb.Core.Cesar.Pages
             if (existe == true)
             {
                 click.ClickByCssSelector(idField.fieldBtnCloseCarol);
-                clickSearchButton(field);
-            }
-            else
-            {
-                clickSearchButton(field);
             }
             return this;
         }
-        public CheckData searchForZipCode(string zipCode,string field)
+        public CheckData searchForZipCode(string zipCode, string field)
         {
-            writeZipCode(zipCode);
-            closeIfExist(field);
+            writeZipCode(zipCode + Keys.Enter);
             return new CheckData(driver);
         }
         public CheckData searchTrackingCode(string tracking, string field)
         {
-            writeTrackingCode(tracking);
-            closeIfExist(field);
+            writeTrackingCode(tracking + Keys.Enter);
             return new CheckData(driver);
         }
     }
