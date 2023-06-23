@@ -1,0 +1,43 @@
+[1mdiff --cc README.md[m
+[1mindex 4197cf1,4e5f79e..0000000[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@@ -1,19 -1,19 +1,38 @@@[m
+[32m++<<<<<<< HEAD[m
+[32m +# Introdução [m
+[32m +Este projeto visa executar a automação de testes do projeto automação correios[m
+[32m +[m
+[32m +# Pré-requisitos[m
+[32m +Ter instalado as aplica��es abaixo:[m
+[32m +- Visual Studio 2019[m
+[32m +- Git[m
+[32m +[m
+[32m +# Executando os testes[m
+[32m +Para executar os testes do projeto via prompt com a configuração padrão, basta executar o comando abaixo(é necessário estar com o prompt no diretório da solution):[m
+[32m +[m
+[32m +	$ dotnet test[m
+[32m +[m
+[32m +Caso queira executar os testes do projeto com uma configuração específica, basta chamar o arquivo de configuração(extensão `.runsettings`) no comando:[m
+[32m +[m
+[32m +	$ dotnet test -s <arquivo de configuração>[m
+[32m++=======[m
+[32m+ # Introduçãoo [m
+[32m+ Este projeto visa executar a automaçãoo de testes do projeto Automação Web Correios Cesar [m
+[32m+ [m
+[32m+ # Pré-requisitos[m
+[32m+ Ter instalado as aplicaçõeses abaixo:[m
+[32m+ - Visual Studio 2022[m
+[32m+ - Git[m
+[32m+ [m
+[32m+ # Executando os testes[m
+[32m+ Para executar os testes do projeto via prompt com a configuraçãoo padrãoo, basta executar o comando abaixo(é necessário estar com o prompt no diretório da solution):[m
+[32m+ [m
+[32m+ 	$ dotnet test[m
+[32m+ [m
+[32m+ Caso queira executar os testes do projeto com uma configuraçãoo específica, basta chamar o arquivo de configuraçãoo(extensão `.runsettings`) no comando:[m
+[32m+ [m
+[32m+ 	$ dotnet test -s <arquivo de configuraçãoo>[m
+[32m++>>>>>>> e44aa55140694b95742b4e1dd7cfe976248db091[m
+  [m
+  Ex: dotnet test -s appChrome.runsettings[m
+  [m
