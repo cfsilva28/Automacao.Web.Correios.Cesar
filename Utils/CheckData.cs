@@ -11,29 +11,7 @@ namespace AutomationWeb.Core.Cesar.Pages
         {
             idField = util.ConvertJsonToObject<CheckDataModel>(
                 Constants.ELEMENTSDIRECTORY + @"\checkData.json");
-        }
-        public CheckData selectCurrentWindow()
-        {
-            string currentWindowHandle = driver.CurrentWindowHandle;
-            string newWindowHandle = string.Empty;
-
-            foreach (string handle in driver.WindowHandles)
-            {
-                if (handle != currentWindowHandle)
-                {
-                    newWindowHandle = handle;
-                    break;
-                }
-            }
-            driver.SwitchTo().Window(newWindowHandle);
-            return this;
-        }
-        public CheckData currentWindow()
-        {
-            string currentWindowHandle = driver.CurrentWindowHandle;
-            driver.SwitchTo().Window(currentWindowHandle);
-            return this;
-        }
+        }        
         public string checkReturnTxtInvalidZip()
         {
             IWebElement mensagemResultadoAlerta = driver.FindElement(By.Id(idField.textResultInvalid));

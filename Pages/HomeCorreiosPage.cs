@@ -34,12 +34,6 @@ namespace AutomationWeb.Core.Cesar.Pages
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", element);
             return element;
         }
-        // public HomeCorreiosPage clickSearchButton(string field)
-        // {
-        //screenDown();
-        // click.ClickByCssSelector(field);
-        //   return this;
-        // }
         public bool helperCarol()
         {
             try
@@ -61,12 +55,12 @@ namespace AutomationWeb.Core.Cesar.Pages
             }
             return this;
         }
-        public CheckData searchForZipCode(string zipCode, string field)
+        public CheckData searchForZipCode(string zipCode)
         {
             writeZipCode(zipCode + Keys.Enter);
             return new CheckData(driver);
         }
-        public CheckData searchTrackingCode(string tracking, string field)
+        public CheckData searchTrackingCode(string tracking)
         {
             writeTrackingCode(tracking + Keys.Enter);
             return new CheckData(driver);
