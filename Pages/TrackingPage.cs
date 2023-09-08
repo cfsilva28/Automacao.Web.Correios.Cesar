@@ -20,8 +20,7 @@ namespace Teste.AutomacaoWeb.Correios.Cesar.Pages
         }
         public string inputCaptcha()
         {
-            var cr = new CheckData(driver);
-            cr.selectCurrentWindow();
+            changeWindow("");
             string caminhoArquivoHtml = Path.Combine(Directory.GetCurrentDirectory(), Constants.INPUTDIRECTORY, "input.html");
             driver.Navigate().GoToUrl(caminhoArquivoHtml);
             IWebElement inputElement = driver.FindElement(By.Id("valor"));

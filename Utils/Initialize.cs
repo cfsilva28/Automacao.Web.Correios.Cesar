@@ -1,7 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
 using AutomationWeb.Core.Cesar.Utils;
-using AutomationWeb.Core.Cesar.Drivers;
 
 [SetUpFixture]
 public class BaseReport
