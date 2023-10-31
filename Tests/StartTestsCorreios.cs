@@ -10,9 +10,6 @@ namespace AutomationWeb.Core.Cesar.Tests
     [TestFixture]
     public class StartTestsCorreios : Initialize
     {
-        HomeCorreiosPage home;
-        TrackingPage tracking;
-        CheckData check;
 
         [TestCase(TestName = "Avaliação Busca CEP Incorreto")]
         public void IniciarTesteBuscaCepCorreiosCepIncorreto()
@@ -34,17 +31,18 @@ namespace AutomationWeb.Core.Cesar.Tests
             Assert.IsTrue(check.checkReturnTxtValidZip().Contains(Constants.TXT_CEP_LOGRADOURO), "Confirma o endereço");
             Assert.AreEqual(Constants.TXT_LOCALIDADE_UF, check.checkReturnTxtState(), "Confirma que o Estado existe");
         }
-
         [TestCase(TestName = "Avaliação Busca Código Rastreamento")]
         public void IniciarTesteBuscaCodigoRastreamento()
         {
+            HomeCorreiosPage home = new HomeCorreiosPage(driver);
             home.selectCurrentWindow();
             home.searchTrackingCode(Constants.CODIGO_RASTREIO);
-            tracking.trackingNextPage()
-                .getValueMessageSearchResult();
-            Assert.AreEqual(Constants.TXT_DADOS_NAO_ENCONTRADOS, check.getValueMessageSearchResult(), "Confirma que o código de rastreio não existe");
-
+            var message = new TrackingPage(driver)
+            .trackingNextPage()
+            .getValueMessageSearchResult();
+            Assert.AreEqual(Constants.TXT_DADOS_NAO_ENCONTRADOS, message, "Confirma que o código de rastreio não existe");
 
         }
+
     }
 }
