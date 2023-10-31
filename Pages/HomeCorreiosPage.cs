@@ -60,10 +60,10 @@ namespace AutomationWeb.Core.Cesar.Pages
             writeZipCode(zipCode + Keys.Enter);
             return new CheckData(driver);
         }
-        public CheckData searchTrackingCode(string tracking)
+        public HomeCorreiosPage searchTrackingCode(string tracking)
         {
             writeTrackingCode(tracking + Keys.Enter);
-            return new CheckData(driver);
+            return new HomeCorreiosPage(driver);
         }
     }
 }
