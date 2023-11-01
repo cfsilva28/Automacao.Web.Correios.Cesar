@@ -30,7 +30,7 @@ namespace AutomationWeb.Core.Cesar.Pages
         }
         public string getValueMessageSearchResult()
         {
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(2000);
             var text = get.GetInnerTextByCssSelector(idField.alerMessage);
             return text;
         }

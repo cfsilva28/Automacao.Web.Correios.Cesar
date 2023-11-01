@@ -56,11 +56,10 @@ namespace Teste.AutomacaoWeb.Correios.Cesar.Pages
         }
         public TrackingPage writeCaptchaCode()
         {
-            screenDown();
-            TrackingPage trackingPage = new TrackingPage(driver);
-            var cr = new CheckData(driver);
+            TrackingPage trackingPage = new TrackingPage(driver);            
             string captchaValue = trackingPage.inputCaptcha();
             write.WriteByCssSelector(idField.fieldCaptcha, captchaValue + Keys.Enter);
+           
             return this;
         }
         public CheckData trackingNextPage()
